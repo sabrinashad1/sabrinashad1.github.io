@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<head>
+<script src="/assets/jquery.js"></script>
+<link ='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #232323;
+}
+div {
+  height: 400px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Londrina Shadow', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: #aaaaaa;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: #bbbbbb;
+  margin: 0px 0 70px 0;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+  ul {
+      padding: 10px;
+      background: rgb(0,0,0,0.5);
+      text-align: center;
+    }
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<ul>
+  <li><button onclick=Namkeen()>Namkeen</button></li>
+  <li><button onclick=MainCourse()>MainCourse</button></li>
+  <li><button onclick=Dessert()>Dessert</button></li>
+</ul>
+
+<h1>Sabrina Hossain Zinan's Resurant</h1>
+<h2>Indian Cuisine</h2>
+
+<div id="Shad"> </div>
+
+<script>
+
+  NamkeenImages = [
+    'url("https://www.littleindia.ca/indian-food-delivery-take-out/wp-content/uploads/2018/09/Samosa.jpg")',
+    'url("https://4.bp.blogspot.com/_0CWdGn9Gu5c/TRSkGk9tzZI/AAAAAAAAHNk/3EYgnURFbjw/s1600/chilli+paneer+main+yes.jpg")',
+    'url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Gulaab_Jamun_%28homemade%21%29_bright.jpg/1200px-Gulaab_Jamun_%28homemade%21%29_bright.jpg")',
+  ]
+  MainCourseImages = [
+    'url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Rajma_Chawal%2C_from_India.jpg/1200px-Rajma_Chawal%2C_from_India.jpg")',
+    'url("https://www.whiskaffair.com/wp-content/uploads/2018/03/Paneer-Lababdar-5.jpg")',
+    'url("https://www.ektaindianrestaurant.com/fishtown/br/wp-content/uploads/sites/5/2017/02/Paneer-Naan-1.jpg")',
+    ]
+    DessertImages = [
+      'url("https://i0.wp.com/media.hungryforever.com/wp-content/uploads/2017/06/20131010/easy-rasgulla-recipes.jpg?fit=2832%2C2128&ssl=1")',
+      'url("https://www.wikihow.com/images/thumb/5/55/Make-Jalebi-Step-18-Version-7.jpg/aid665506-v4-728px-Make-Jalebi-Step-18-Version-7.jpg")',
+      'url("https://www.archanaskitchen.com/images/archanaskitchen/0-Archanas-Kitchen-Recipes/2018/jan-5/Carrot_Halwa_Recipe-0834.jpg")',
+      ]
+
+function Namkeen() {
+  Shadina= document.getElementById("Shad")
+  Shadina.innerHTML = ''
+  Shadina.innerHTML += NamkeenDivs[0]
+  Shadina.innerHTML += NamkeenDivs[1]
+  Shadina.innerHTML += NamkeenDivs[2]
+  items = document.getElementsByClassName("item")
+  items[0].style.background = NamkeenImages[0]
+  items[0].style.backgroundSize = '100% 100%'
+  items[1].style.background = NamkeenImages[1]
+  items[1].style.backgroundSize = '100% 100%'
+  items[2].style.background = NamkeenImages[2]
+  items[2].style.backgroundSize = '100% 100%'
+} 
+function MainCourse() {
+  Shadina= document.getElementById("Shad")
+  Shadina.innerHTML = ''
+  Shadina.innerHTML += MainCourseDivs[0]
+  Shadina.innerHTML += MainCourseDivs[1]
+  Shadina.innerHTML += MainCourseDivs[2]
+  items = document.getElementsByClassName("item")
+  items[0].style.background = MainCourseImages[0]
+  items[0].style.backgroundSize = '100% 100%'
+  items[1].style.background = MainCourseImages[1]
+  items[1].style.backgroundSize = '100% 100%'
+  items[2].style.background = MainCourseImages[2]
+  items[2].style.backgroundSize = '100$ 100%'
+}
+function Dessert() {
+  Shadina= document.getElementById("Shad")
+  Shadina.innerHTML = ''
+  Shadina.innerHTML += DessertDivs[0]
+  Shadina.innerHTML += DessertDivs[1]
+  Shadina.innerHTML += DessertDivs[2]
+  items = document.getElementsByClassName("item")
+  items[0].style.background = DessertImages[0]
+  items[0].style.backgroundSize = '100% 100%'
+  items[1].style.background = DessertImages[1]
+  items[1].style.backgroundSize = '100% 100%'
+  items[2].style.background = DessertImages[2]
+  items[2].style.backgroundSize = '100% 100%'
+ }
+ NamkeenDivs = [  
+      '<div class="item"><p>Samosa<span class="price">$2.99 per plate</span><br /><small>Made with all purpose flour, and maida, which is folded to look like a trangle. Stuffings can include vegetables and meat.</small></p></div>',
+      '<div class="item"><p>Dry Chilli Panner <span class="price">$8.99 per plate</span><br /><small>Paneer cubes cooked with bell peppers and spices. </small></p></div>',
+      '<div class="item"><p>Gulab Jaman <span class="price">$8.99 per plate</span><br /><small>A sweet with syrup on the jamun. </small></p></div>',
+]
+MainCourseDivs = [
+  '<div class="item"><p>Rajma Chawal<span class="price">$3.99 per plate</span><br /><small>Cooked rice with rajma(red kidney beans) together with achar and additional foods/spices that may be added(optional).</small></p></div>',
+      '<div class="item"><p>Paneer Ki sabji<span class="price">$6.99 per plate</span><br /><small>Paneer cubes cooked with bell peppers and spices with small coating of yogurt on the top. </small></p></div>',
+      '<div class="item"><p>Paneer Naan<span class="price">$5.99 per plate</span><br /><small>Made of maida, cornflour, yeast roasted jeera and salt along with the paneer stuffing inside the naan.  </small></p></div>',
+]
+DessertDivs = [
+  '<div class="item"><p>Ras Malai<span class="price">$3.99 per plate</span><br /><small>Made of paneer, cream, semolina, and sugar, small peda type shapes are made followed by the syrup and coating.</small></p></div>',
+      '<div class="item"><p>Jalebi<span class="price">$6.99 per plate</span><br /><small>Made into twisty shapes using maida, saffron, and ghee followed by a syrupy coating. </small></p></div>',
+      '<div class="item"><p>Gajar ka halwa<span class="price">$5.99 per plate</span><br /><small>Made of carrots, milk, water, sugar and ghee</small></p></div>',
+      ]
+      
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
+`
