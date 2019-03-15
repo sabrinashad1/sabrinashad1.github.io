@@ -46,7 +46,6 @@ p {
   -webkit-transition: height .5s;
   -moz-transition: height .5s;
 }
-
 small {
   opacity: 0;
 }
@@ -55,15 +54,12 @@ small {
       background: rgb(0,0,0,0.5);
       text-align: center;
     }
-
 .show-description p {
   height: 150px;
 }
-
 .show-description small {
   opacity: 1;
 }
-
 .price {
   float: right;
 }
@@ -88,40 +84,47 @@ small {
     font-size: 16px;
   }
 }
-
 </style>
-
 </head>
-
 <body>
 <ul>
   <li><button onclick=Namkeen()>Namkeen</button></li>
   <li><button onclick=MainCourse()>MainCourse</button></li>
   <li><button onclick=Dessert()>Dessert</button></li>
+  <li><button onclick=Drink()>Drink</button></li>
 </ul>
-
-<h1>Sabrina Hossain Zinan's Resurant</h1>
+<h1>Sabrina Hossain Zinan's Resturant</h1>
 <h2>Indian Cuisine</h2>
-
 <div id="Shad"> </div>
-
 <script>
-
   NamkeenImages = [
     'url("https://www.littleindia.ca/indian-food-delivery-take-out/wp-content/uploads/2018/09/Samosa.jpg")',
     'url("https://4.bp.blogspot.com/_0CWdGn9Gu5c/TRSkGk9tzZI/AAAAAAAAHNk/3EYgnURFbjw/s1600/chilli+paneer+main+yes.jpg")',
     'url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Gulaab_Jamun_%28homemade%21%29_bright.jpg/1200px-Gulaab_Jamun_%28homemade%21%29_bright.jpg")',
+	
+'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_1oB2iKkCm7YflifQvIM2VBwh3alFmXCmIXO4xChT2gYSP7ETfA")',
   ]
   MainCourseImages = [
     'url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Rajma_Chawal%2C_from_India.jpg/1200px-Rajma_Chawal%2C_from_India.jpg")',
     'url("https://www.whiskaffair.com/wp-content/uploads/2018/03/Paneer-Lababdar-5.jpg")',
     'url("https://www.ektaindianrestaurant.com/fishtown/br/wp-content/uploads/sites/5/2017/02/Paneer-Naan-1.jpg")',
+	
+'url("https://www.archanaskitchen.com/images/archanaskitchen/0-Archanas-Kitchen-Recipes/2017/26-may/Aloo_Gobi_Sabzi_Recipe-4.jpg")',
+
+'url("https://www.cookwithmanali.com/wp-content/uploads/2014/03/punjabi-chole-masala-1-notitle-cwm.jpg")',
     ]
     DessertImages = [
       'url("https://i0.wp.com/media.hungryforever.com/wp-content/uploads/2017/06/20131010/easy-rasgulla-recipes.jpg?fit=2832%2C2128&ssl=1")',
       'url("https://www.wikihow.com/images/thumb/5/55/Make-Jalebi-Step-18-Version-7.jpg/aid665506-v4-728px-Make-Jalebi-Step-18-Version-7.jpg")',
       'url("https://www.archanaskitchen.com/images/archanaskitchen/0-Archanas-Kitchen-Recipes/2018/jan-5/Carrot_Halwa_Recipe-0834.jpg")',
       ]
+	  DrinkImages = [
+		  'url("https://www.coca-colaindia.com/content/dam/journey/in/en/private/brands/Limca/Limca-prod.rendition.598.336.jpg")',
+			  
+'url("https://mykathmandukitchen.com/wp-content/uploads/2018/03/lassi-1.jpg")',
+	
+'url("https://aaj.tv/wp-content/uploads/2017/06/dfs.png")',
+	]
 
 function Namkeen() {
   Shadina= document.getElementById("Shad")
@@ -129,6 +132,7 @@ function Namkeen() {
   Shadina.innerHTML += NamkeenDivs[0]
   Shadina.innerHTML += NamkeenDivs[1]
   Shadina.innerHTML += NamkeenDivs[2]
+  Shadina.innerHTML += NamkeenDivs[3]
   items = document.getElementsByClassName("item")
   items[0].style.background = NamkeenImages[0]
   items[0].style.backgroundSize = '100% 100%'
@@ -136,6 +140,8 @@ function Namkeen() {
   items[1].style.backgroundSize = '100% 100%'
   items[2].style.background = NamkeenImages[2]
   items[2].style.backgroundSize = '100% 100%'
+  items[3].style.background = NamkeenImages[3]
+  items[3].style.backgroundSize = '100% 100%'
 } 
 function MainCourse() {
   Shadina= document.getElementById("Shad")
@@ -143,13 +149,19 @@ function MainCourse() {
   Shadina.innerHTML += MainCourseDivs[0]
   Shadina.innerHTML += MainCourseDivs[1]
   Shadina.innerHTML += MainCourseDivs[2]
+  Shadina.innerHTML += MainCourseDivs[3]
+  Shadina.innerHTML += MainCourseDivs[4]
   items = document.getElementsByClassName("item")
   items[0].style.background = MainCourseImages[0]
   items[0].style.backgroundSize = '100% 100%'
   items[1].style.background = MainCourseImages[1]
   items[1].style.backgroundSize = '100% 100%'
   items[2].style.background = MainCourseImages[2]
-  items[2].style.backgroundSize = '100$ 100%'
+  items[2].style.backgroundSize = '100% 100%'
+  items[3].style.background = MainCourseImages[3]
+  items[3].style.backgroundSize = '100% 100%'
+  items[4].style.background = MainCourseImages[4]
+  items[4].style.backgroundSize = '100% 100%'
 }
 function Dessert() {
   Shadina= document.getElementById("Shad")
@@ -165,26 +177,47 @@ function Dessert() {
   items[2].style.background = DessertImages[2]
   items[2].style.backgroundSize = '100% 100%'
  }
+ function Drink() {
+	 Shadina= document.getElementById("Shad")
+	 Shadina.innerHTML = ''
+	 Shadina.innerHTML += DrinkDivs[0]
+	 Shadina.innerHTML += DrinkDivs[1]
+	 Shadina.innerHTML += DrinkDivs[2]
+	 items = document.getElementsByClassName("item")
+	 items[0].style.background = DrinkImages[0]
+	 items[0].style.backgroundSize = '100% 100%'
+	 items[1].style.background = DrinkImages[1]
+	 items[1].style.backgroundSize = '100% 100%'
+	 items[2].style.background = DrinkImages[2]
+	 items[2].style.background = '100% 100%'
+ }
  NamkeenDivs = [  
-      '<div class="item"><p>Samosa<span class="price">$2.99 per plate</span><br /><small>Made with all purpose flour, and maida, which is folded to look like a trangle. Stuffings can include vegetables and meat.</small></p></div>',
-      '<div class="item"><p>Dry Chilli Panner <span class="price">$8.99 per plate</span><br /><small>Paneer cubes cooked with bell peppers and spices. </small></p></div>',
-      '<div class="item"><p>Gulab Jaman <span class="price">$8.99 per plate</span><br /><small>A sweet with syrup on the jamun. </small></p></div>',
+      '<div class="item" onclick=this.classList.toggle("show-description")><p>Samosa<span class="price">$2.99 per plate</span><br /><small>Made with all purpose flour, and maida, which is folded to look like a trangle. Stuffings can include vegetables and meat.</small></p></div>',
+      '<div class="item"onclick=this.classList.toggle("show-description")><p>Dry Chilli Panner <span class="price">$8.99 per plate</span><br /><small>Paneer cubes cooked with bell peppers and spices. </small></p></div>',
+      '<div class="item"onclick=this.classList.toggle("show-description")><p>Gulab Jaman <span class="price">$8.99 per plate</span><br /><small>A sweet with syrup on the jamun. </small></p></div>',
+	  '<div class="item"><p>Namak Para <span class="price">$8.99 per plate</span><br /><small>Curved shapes with a crunchy bite.</small></p></div>',
+	 
 ]
 MainCourseDivs = [
-  '<div class="item"><p>Rajma Chawal<span class="price">$3.99 per plate</span><br /><small>Cooked rice with rajma(red kidney beans) together with achar and additional foods/spices that may be added(optional).</small></p></div>',
-      '<div class="item"><p>Paneer Ki sabji<span class="price">$6.99 per plate</span><br /><small>Paneer cubes cooked with bell peppers and spices with small coating of yogurt on the top. </small></p></div>',
-      '<div class="item"><p>Paneer Naan<span class="price">$5.99 per plate</span><br /><small>Made of maida, cornflour, yeast roasted jeera and salt along with the paneer stuffing inside the naan.  </small></p></div>',
+  	'<div class="item"onclick=this.classList.toggle("show-description")><p>Rajma Chawal<span class="price">$3.99 per plate</span><br /><small>Cooked rice with rajma(red kidney beans) together with achar and additional foods/spices that may be added(optional).</small></p></div>',
+      '<div class="item"onclick=this.classList.toggle("show-description")><p>Paneer Ki sabji<span class="price">$6.99 per plate</span><br /><small>Paneer cubes cooked with bell peppers and spices with small coating of yogurt on the top. </small></p></div>',
+      '<div class="item"onclick=this.classList.toggle("show-description")><p>Paneer Naan<span class="price">$5.99 per plate</span><br /><small>Made of maida, cornflour, yeast roasted jeera and salt along with the paneer stuffing inside the naan.  </small></p></div>',
+	'<div class="item"onclick=this.classList.toggle("show-description")><p>Gobi Ki Sabji<span class="price">$3.99 per plate</span><br /><small>Cauliflower cooked nd added with spices for taste.</small></p></div>',
+	'<div class="item"onclick=this.classList.toggle("show-description")><p>Chole<span class="price">$3.99 per plate</span><br /><small>Chickpeas cooked with sices(indian way) along with additional toppings.</small></p></div>',
 ]
 DessertDivs = [
-  '<div class="item"><p>Ras Malai<span class="price">$3.99 per plate</span><br /><small>Made of paneer, cream, semolina, and sugar, small peda type shapes are made followed by the syrup and coating.</small></p></div>',
-      '<div class="item"><p>Jalebi<span class="price">$6.99 per plate</span><br /><small>Made into twisty shapes using maida, saffron, and ghee followed by a syrupy coating. </small></p></div>',
-      '<div class="item"><p>Gajar ka halwa<span class="price">$5.99 per plate</span><br /><small>Made of carrots, milk, water, sugar and ghee</small></p></div>',
+  	'<div class=0"item"onclick=this.classList.toggle("show-description")><p>Ras Malai<span class="price">$3.99 per plate</span><br /><small>Made of paneer, cream, semolina, and sugar, small peda type shapes are made followed by the syrup and coating.</small></p></div>',
+      '<div class="item"onclick=this.classList.toggle("show-description")><p>Jalebi<span class="price">$6.99 per plate</span><br /><small>Made into twisty shapes using maida, saffron, and ghee followed by a syrupy coating. </small></p></div>',
+      '<div class="item"onclick=this.classList.toggle("show-description")><p>Gajar ka halwa<span class="price">$5.99 per plate</span><br /><small>Made of carrots, milk, water, sugar and ghee</small></p></div>',
       ]
+	  DrinkDivs = [
+  	'<div class="item"onclick=this.classList.toggle("show-description")><p>Limca<span class="price">$1.50</span><br/><small>Artificial drink made of lemon and lime.</small></p></div>',
+	'<div class="item"onclick=this.classList.toggle("show-description")><p>Lassi<span class="price">$1.50</span><br/><small>Milk drink.</small></p></div>',
+	'<div class="item"onclick=this.classList.toggle("show-description")><p>Faluda<span class="price">$1.50</span><br/><small>Combination of milk, and ice cream along with walnuts or almonds as topping.</small></p></div>',
+	  ]
       
   $('div').on('click', function() {
       $(this).toggleClass('show-description');
   });
 </script>
-
 </body>
-`
